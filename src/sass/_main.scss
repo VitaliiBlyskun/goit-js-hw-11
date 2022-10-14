@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(248, 193, 126);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px;
+    }
+}
+
+// @media screen and (min-width: 768px) {
+//     .container {
+//         width: 768px;
+//     }
+// }
+
+@media screen and (min-width: 1600px) {
+    .container {
+        width: 1390px;  
+    }
+}
+
+.header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.gallery {
+    background-color: bisque;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    right: 37.5%; 
+    width: 130px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .5em 1.5em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+
+button:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+button:focus { background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+
+
+.search-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.photo-card {
+    width: 450px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 75px;
+    display: inline-block;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.info-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.load-more {
+    width: 200px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+
+.load-more:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+.load-more:focus { background: linear-gradient(#f5ae00, #f59500) #f5ae00;}
+
+.footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.is-hidden {
+    display: none;
+}

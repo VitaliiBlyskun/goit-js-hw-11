@@ -1,0 +1,28 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+.link {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+ul,
+ol {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
