@@ -49,7 +49,6 @@ async function initPage () {
           if (apiClass.isShowLoadMore) {
             refs.loadMoreBtn.classList.remove('is-hidden');
           }
-        
     } catch (error) {
         Notify.failure(
             error.message,
@@ -64,10 +63,10 @@ async function initPage () {
 refs.form.addEventListener('submit', handleSubmit);
 
 const onLoadMore = () => {
-  if (!apiClass.isShowLoadMore) {
-    refs.loadMoreBtn.classList.add('is-hidden');
-    Notify.info("We're sorry, but you've reached the end of search results.");
-  }
+  // if (!apiClass.isShowLoadMore) {
+  //   refs.loadMoreBtn.classList.add('is-hidden');
+  //   Notify.info("We're sorry, but you've reached the end of search results.");
+  // }
 
   apiClass.incrementPage();
 
@@ -77,7 +76,9 @@ const onLoadMore = () => {
     try {
         const data = await apiClass.getPhotos()
         renderContent(data.hits);
-
+        if (!apiClass.isShowLoadMore) {
+          Notify.info("We're sorry, but you've reached the end of search results.");   
+        }
     } catch (error) {
         Notify.failure(
             error.message,
@@ -97,6 +98,9 @@ const generateContent = array =>
 const renderContent = array => {
   const result = generateContent(array);
   refs.gallery.insertAdjacentHTML('beforeend', result);
+    if (!apiClass.isShowLoadMore) {
+    refs.loadMoreBtn.classList.add('is-hidden');
+  }
   lightbox.refresh();
 };
 
